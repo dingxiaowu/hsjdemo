@@ -1,0 +1,14 @@
+{
+    padding: 0px;
+    margin:0px;
+}
+span{
+    width: 100px;
+    line-height: 20px;
+    border: 1px solid black ;
+    border-radius: 5px;
+    padding: 4px;
+}
+span:hover{
+  background-color: red;
+}
