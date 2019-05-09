@@ -6,46 +6,91 @@
 </head>
 <body>
 
-    <!--001打印0-100 的质数-->
-    <script type="text/javascript">
-        var count=0;
-       /* for(var i=1;i<100;i++){
-           for(var j=1;j<100;j++){
-              if(i%j==0){
-                  count++
-              }
-           }
-           if(count==2){
-                document.write(i+"   ")
-            }
-            count=0;
-        }*/
-        for(var i=1;i<100;i++){
-            for(var j=1;j<Math.abs(i);j++){
-                if(i%j==0){
-                    count++
-                }
-            }
-            if(count==1){
-                document.write(i+"   ")
-            }
-            count=0;
+<!--&lt;!&ndash;001打印0-100 的质数&ndash;&gt;
+<script type="text/javascript">
+    var count=0;
+   /* for(var i=1;i<100;i++){
+       for(var j=1;j<100;j++){
+          if(i%j==0){
+              count++
+          }
+       }
+       if(count==2){
+            document.write(i+"   ")
         }
-    </script>
-    <!--001打印0-100 的质数-->
+        count=0;
+    }*/
+    for(var i=1;i<100;i++){
+        for(var j=1;j<Math.abs(i);j++){
+            if(i%j==0){
+                count++
+            }
+        }
+        if(count==1){
+            document.write(i+"   ")
+        }
+        count=0;
+    }
+</script>-->
+<!--001打印0-100 的质数-->
 
 
-    <script type="text/javascript">
-        var obj={
-            name:"zhangsan",
-            sex:"男",
-            age:"26"
-        }
-        for(var n in obj){
-            console.log("属性名"+n);
-            console.log("属行值"+obj.name)
-        }
-    </script>
+<!--<script type="text/javascript">
+    var obj={
+        name:"zhangsan",
+        sex:"男",
+        age:"26"
+    }
+    for(var n in obj){
+        console.log("属性名"+n);
+        console.log("属行值"+obj.name)
+    }
+</script>-->
 
+<!--打开与关闭窗口
+<a href="javascrip:;">点我打开页面</a>
+<a href="javascrip:;">点我关闭页面</a>
+<script>
+    //新窗口 = window.open(地址,是否开新窗口,新窗口的各种参数);
+    var a1 = document.getElementsByTagName("a")[0];
+    var a2 = document.getElementsByTagName("a")[1];
+    a1.onclick = function () {
+        //举例1  window.open("http://www.baidu.com","_blank")
+        var json = {
+            "width": "100px",
+            "height": "100px",
+            "top": "100px",
+            "left": "100px",
+            "location": "no",
+            "fullscreen": "no",
+            "name": "helloworld"
+        }
+        window.open("http://www.baidu.com", "_blank", json)
+    }
+    a2.onclick = function () {
+        window.close();
+    }
+</script>-->
+
+<!--点击盒子进行跳转
+<div>点击我吧</div>
+<script>
+   var div = document.getElementsByTagName("div")[0];
+   div.onclick=function () {
+       location.href= "http://www.baidu.com";
+   }
+</script>-->
+
+<!--作用域
+<script>
+    console.log(a)//undefined
+    var a=100;
+    fn("zhangsan")
+    function fn(name) {//zhangsan 20
+        age=20
+        console.log(name,age)
+        var  age
+    }
+</script>-->
 </body>
 </html>
