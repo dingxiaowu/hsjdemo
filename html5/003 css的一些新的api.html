@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 设置文本的阴影
+        p{
+            font-size: 50px;
+            font-family: "Microsoft Yahei";
+            text-align: center;
+            color: fuchsia;
+            margin-top: 10px;
+
+            text-shadow: 20px 27px 22px pink;
+        }*/
+
+        /*  凹凸文字效果
+        body{
+             background-color: #666;
+         }
+          div{
+              font-size: 100px;
+              font-family: "Microsoft Yahei";
+              font-weight: bold;
+              color: #666;
+          }
+          .tu {
+              text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+          }
+
+          .ao {
+              text-shadow: -1px -1px 1px #000, 1px 1px 1px #fff;
+          }*/
+
+        /* 动画
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            margin: 100px auto;
+            !*只让宽度在变化时进行变化*!
+            transition: width 2s linear 0s;
+        }
+        .box:hover{
+            width:500px;
+            background-color: orange;
+        }*/
+
+        .heart {
+            width: 200px;
+            height: 300px;
+            position: relative;
+            margin: 100px auto;
+            border: 1px solid #000;
+        }
+        .heart::before, .heart::after {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: red;
+            left: 0;
+            top:0;
+            content: "左一半";
+
+            border-radius: 100px 100px 0 0;
+            color: yellow;
+            font-size: 30px;
+            font-family: "MIcrosoft Yahei";
+            line-height: 100px;
+            text-align: center;
+            transform: rotate(-45deg);
+        }
+        .heart::after{
+            content: "右一半";
+            left: 71px;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+<!-- <p>生命不息，永不止步</p>-->
+
+<!-- <div class="ao">永不止步</div>
+ <div class="tu">永不止步</div>-->
+
+<!-- <div class="box"></div>-->
+
+<div class="heart"></div>
+</body>
+</html>
