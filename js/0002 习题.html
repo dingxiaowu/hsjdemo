@@ -5,35 +5,112 @@
     <title>Title</title>
 </head>
 <body>
-   <!--1 数据类型转换 -->
-   <script>
-       alert(typeof (a))
-       alert(typeof (undefined))
-       alert(typeof (NaN))
-       alert(typeof (null))
-       var a="123abc"
-       alert(typeof (+a))
-       alert(typeof (!!a))
-       alert(typeof (a+""))
 
-       alert(typeof (1=="1"))
-       alert(typeof (NaN==NaN))
-       alert(typeof (NaN==undefined))
-       alert(typeof ("11"+11))
-       alert(typeof (1==="1"))
+<!--1 数据类型转换
+<script>
+  // alert(typeof (a))  // undefined
+  //alert(typeof (undefined))// undefined
+  //  alert(typeof (NaN))//number
+  //alert(typeof (null))//object
 
-       alert(parseInt("123abc"))
+   /*var a="123abc"*/
+  // alert(typeof (+a))  //Number
+  // alert(typeof (!!a)) //Boolean
+  //alert(typeof (a+""))//String
 
-       var num=123123.456789;
-       alert(num.toFixed(3));
-       typeof (typeof(a));
-   </script>
+  // alert(typeof (1=="1"))//true
+  // alert(typeof (NaN==NaN))//false
+  // alert(typeof (NaN==undefined)) //false
+  //  alert(typeof ("11"+11)) //String
+  // alert(typeof (1==="1")) //false
+  //alert(parseInt("123abc")) //123
+ // var num=123123.456789;
+ // alert(num.toFixed(3)); //123123.456
+ // typeof (typeof(a));
+</script>-->
+
+<!--2、将一个字符串数组输出为|分割的形式，比如“刘备|张飞|关羽”。使用两种方式实现。-->
+<!--<script>
+    var arr = ["刘备","张飞","关羽"];
+    /*var str=arr[0];
+    for(var i=1;i<arr.length;i++){
+        str+="|"+arr[i];
+    }
+    console.log(str);*/
+    console.log(arr.join("|"))
+
+</script>-->
+
+<!--3 有一个工资的数组[1500,1200,2000,2100,1800],把工资超过2000的删除。-->
+<!--<script>
+    var arr1 =[1500,1200,2000,2100,1800];
+    var arr2=arr1.filter(function (item, index) {
+        return item<=2000
+    })
+    console.log(arr2)
+</script>-->
+
+<!-- 4 问题：找到数组["c","a","z","a","x","a"]中每一个元素出现的次数。
+      思路：用json来显示某个元素出现的次数。a:3,b:4,c:5...
+      原理：设置一个空的json,判断数组中的元素，是否在json中有该属性
+      如果不存在，就没有该属性，添加该属性，并为其赋值为1
+      如果存在，有该属性，让他的值+1-->
+<!--<script>
+    var arr = ["c", "a", "z", "a", "x", "a"];
+    var json={};
+    arr.forEach(function (ele,index,array) {
+        if(json[ele]==undefined){
+            json[ele]=1;
+        }else {
+            json[ele]+=1;
+        }
+    })
+    console.log(json)
+
+</script>-->
+
+<!--编写一个方法，去掉一个数组的重复元素（面试题）
+思路：创建一个新数组，两个for循环，第一个遍历老数组，第二个遍历新数组。如果新数组中没有老数组的元素，老数组中的元素可以添加进新数组-->
+<!--<script>
+    var arr = ["关羽","关羽","张飞","张飞","刘备","刘备"];
+    var newArr=[];
+    for(var i=0;i<arr.length;i++){
+        var  pool=true;
+        for(var j=0;j<newArr.length;j++){
+            if(newArr[j]==arr[i]){
+                pool=false;
+            }
+        }
+        if(pool==true){
+            newArr.push(arr[i])
+        }
+    }
+    console.log(newArr)
+</script>-->
+
+<!--   模拟日历 与发布会-->
+<!--<div></div>
+<script>
+    //1.创建一个当前日期的日期对象
+    var  date=new Date();
+    //2.然后获取其中的年、月、日和星期
+    var year=date.getFullYear();
+    var month = date.getMonth();
+    var hao = date.getDate();
+    var week = date.getDay();
+    var arr = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+    var div = document.getElementsByTagName("div")[0];
+    div.innerText = "今天是："+year+"年"+(month+1)+"月"+hao+"日 "+arr[week];
+</script>-->
 
 
-   <!--2 问题：找到数组["c","a","z","a","x","a"]中每一个元素出现的次数。-->
-          <!--模拟日历 与发布会-->
+<!--   当鼠标悬停在img上时，更换为另外一张图片；鼠标离开时，还原为本来的图片。-->
 
-   <!--3 当鼠标悬停在img上时，更换为另外一张图片；鼠标离开时，还原为本来的图片。-->
+
+
+<script>
+
+</script>
 
 </body>
 </html>
