@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .code {
+            width: 50px;
+            height: 50px;
+        }
+        .code a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background: url(http://img.smyhvae.com/20180127_QRcode_small.png) no-repeat -159px -51px;
+            position: relative;
+
+        }
+        .code-big {
+            position: absolute;
+            top: 10px;
+            left: 80px;
+        }
+        .hide {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+     <div class="code">
+         <a href="#"></a>
+         <img src="http://img.smyhvae.com/2016040102.jpg" alt="" class="code-big hide">
+     </div>
+     <script>
+        window.onload=function () {
+           var a = document.getElementsByTagName("a")[0];
+           var div = document.getElementsByClassName("code-big")[0];
+           a.onmouseover=fn1;//鼠标悬停
+           a.onmouseout=fn2;//鼠标移动
+            function fn1() {
+               div.className="code-big show"
+           }
+           function  fn2() {
+              div.className="code-big hide"
+            }
+
+        }
+     </script>
+</body>
+</html>

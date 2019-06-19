@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            width: 300px;
+            height: 36px;
+            padding-left: 5px;
+            color: #ccc;
+        }
+
+        label {
+            position: absolute;
+            top: 82px;
+            left: 56px;
+            font-size: 12px;
+            color: #ccc;
+            cursor: text;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+京东: <input id="inp1" type="text" value="微单相机"/><br><br>
+淘宝: <label for="inp2">电动牙刷</label><input id="inp2" type="text"/><br><br>
+placeholder: <input type="text" placeholder="我是placeholder"/>
+</body>
+
+<script>
+    //需求：京东的input按钮获取焦点后，立刻删除内容。失去后光标显示文字。
+    var inp1= document.getElementById("inp1");
+    inp1.onfocus=function () {
+       if(inp1.value==="微单相机"){
+           inp1.value="";
+           inp1.style.color="#000"
+       }
+    }
+    inp1.onblur=function () {
+        inp1.value="微单相机";
+        inp1.style.color="#ccc"
+    }
+    //需求：在input中输入文字，label标签隐藏；当里面的文字变成空字符串，label显示。
+
+
+</script>
+</html>

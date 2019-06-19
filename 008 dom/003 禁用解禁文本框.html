@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+账号: <input type="text" value="生命壹号..."/><button>禁用</button><button>解禁</button><br><br>
+密码: <input type="password" value="aaabbbccc"/>
+
+<script>
+    var inp = document.getElementsByTagName("input")[0];
+    var btn0= document.getElementsByTagName("button")[0];
+    var btn1= document.getElementsByTagName("button")[1];
+    btn0.onclick=function () {
+        inp.disabled="ooo";  //禁用文本框。属性值里随便写什么字符串都行，但不能为空。
+    }
+    btn1.onclick=function () {
+       inp.disabled=false;  //解禁文本框。让disabled属性消失即可。
+    }
+</script>
+
+
+</body>
+</html>

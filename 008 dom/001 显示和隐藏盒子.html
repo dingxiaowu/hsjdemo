@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button{
+            margin: 10px;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .show{
+           display: block;
+        }
+        .hide{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+   <button id="btn">隐藏</button>
+   <div>生命壹号</div>
+   <script>
+       //需求：点击button,隐藏盒子。改变文字，在点击按钮，显示出来。
+       //步骤：
+       //1.获取事件源和相关元素
+       //2.绑定事件
+       //3.书写事件驱动程序
+
+       var btn= document.getElementById("btn");
+       var div1 = document.getElementsByTagName("div")[0];
+       btn.onclick=function () {
+           if(this.innerHTML==="隐藏"){
+               div1.className="hide";
+               btn.innerHTML="显示";
+           }else {
+               div1.className="show";
+               btn.innerHTML="隐藏";
+           }
+       }
+   </script>
+</body>
+</html>
