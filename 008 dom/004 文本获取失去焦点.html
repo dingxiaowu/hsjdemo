@@ -27,12 +27,26 @@
         .show {
             display: block;
         }
+
+        .wrong{
+            border: 2px solid red;
+        }
+        .right{
+            border: 2px solid #91B81D;
+        }
+
     </style>
 </head>
 <body>
 京东: <input id="inp1" type="text" value="微单相机"/><br><br>
 淘宝: <label for="inp2">电动牙刷</label><input id="inp2" type="text"/><br><br>
 placeholder: <input type="text" placeholder="我是placeholder"/>
+
+<p></p>
+
+账号：<input type="text" onblur="fn(this)"/> <br><br>
+密码：<input type="password" onblur="fn(this)"/> <br><br>
+
 </body>
 
 <script>
@@ -49,7 +63,22 @@ placeholder: <input type="text" placeholder="我是placeholder"/>
         inp1.style.color="#ccc"
     }
     //需求：在input中输入文字，label标签隐藏；当里面的文字变成空字符串，label显示。
+     var inp2 = document.getElementById("inp2");
+     var lable = document.getElementsByTagName("label")[0];
+     inp2.oninput=function () {
+         if(this.value===""){
+             lable.className="show";
+         }else {
+             lable.className="hide";
+         }
+     }
 
-
+     function fn(aaa) {
+         if(aaa.value.length < 6 || aaa.value.length>12){
+             aaa.className = "wrong";
+         }else{
+             aaa.className = "right";
+         }
+     }
 </script>
 </html>
